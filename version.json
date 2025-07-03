@@ -1,0 +1,11 @@
+{
+    "version": "1.0.8.6",
+    "version_tuple": [1, 0, 8, 6],
+    "file_description": "MoveMouse - Mantiene activo el cursor",
+    "company_name": "acamus79",
+    "product_name": "MoveMouse",
+    "copyright": "acamus79 © 2025. Todos los derechos reservados.",
+    "original_filename": "MM",
+    "internal_name": "MoveMouse",
+    "bundle_identifier": "com.movemouse.app"
+} 

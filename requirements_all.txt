@@ -1,0 +1,14 @@
+# Requisitos comunes
+pyinstaller==6.14.1
+
+# Windows
+keyboard==0.13.5
+
+# macOS
+pyobjc-core==10.1; sys_platform == 'darwin'
+pyobjc-framework-Quartz==10.1; sys_platform == 'darwin'
+pynput==1.7.6; sys_platform == 'darwin'
+
+# Linux
+python-xlib==0.33; sys_platform == 'linux'
+pynput==1.7.6; sys_platform == 'linux' 
