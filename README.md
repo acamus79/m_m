@@ -16,9 +16,8 @@ Este proyecto consiste en una aplicación multiplataforma que mueve el cursor de
 
 ## Características
 
-- Mueve el cursor en intervalos de tiempo configurables
 - Centra el cursor en la pantalla al iniciar
-- Realiza pequeños movimientos aleatorios
+- Realiza pequeños movimientos aleatorios en intervalos de tiempo
 - Funciona en Windows, macOS y Linux
 - Se puede utilizar el puntero, el teclado, etc. y sigue funcionando en segundo plano
 - Fácil de detener presionando la tecla F12 en todas las plataformas
