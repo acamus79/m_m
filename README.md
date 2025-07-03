@@ -1,3 +1,15 @@
+<p align="center">
+  <a href="https://github.com/acamus79/m_m"><img src="https://github.com/user-attachments/assets/313185b1-d38e-4fdb-bd13-f3c58f4a6001"></a>
+</p>
+  <h1 align="center">MoveMouse - Mantiene tu ratón ocupado</h1>
+  <p align="center">
+  <a href="https://acamus79.github.io" target="_blank"><img align="center" alt="Portfolio"  src="https://forthebadge.com/images/badges/built-with-love.svg"></a>
+  <a href="#" target="_blank"><img align="center" alt="Daugther"  src="https://github.com/acamus79/StoreChallenge/assets/85143329/f5dda3bd-81cb-4ece-9a60-4c7ae215fa88"></a>
+  <a href="#" target="_blank"><img align="center" alt="myMachine"  src="https://github.com/acamus79/StoreChallenge/assets/85143329/5f6c41aa-4209-44b4-8eb7-62f6163c23a7"></a>
+</p>
+
+_____
+
 # MoveMouse
 
 Este proyecto consiste en una aplicación multiplataforma que mueve el cursor del mouse automáticamente en intervalos regulares. Útil para evitar que la pantalla se bloquee por inactividad o para mantener la sesión activa en aplicaciones que se desconectan por tiempo de inactividad.
@@ -178,3 +190,5 @@ Este proyecto está bajo la licencia MIT.
 ## Contribuciones
 
 Las contribuciones son bienvenidas. Si encuentras algún problema o tienes sugerencias, por favor abre un issue o envía un pull request. 
+
+_____
