@@ -8,7 +8,8 @@ Este proyecto consiste en una aplicación multiplataforma que mueve el cursor de
 - Centra el cursor en la pantalla al iniciar
 - Realiza pequeños movimientos aleatorios
 - Funciona en Windows, macOS y Linux
-- Fácil de detener con teclas específicas según la plataforma
+- Se puede utilizar el puntero, el teclado, etc. y sigue funcionando en segundo plano
+- Fácil de detener presionando la tecla F12 en todas las plataformas
 
 ## Archivos del proyecto
 
@@ -21,31 +22,13 @@ Este proyecto consiste en una aplicación multiplataforma que mueve el cursor de
 
 El proyecto utiliza un único archivo `version.json` para gestionar las versiones en todas las plataformas. Para actualizar la versión, simplemente modifica este archivo y vuelve a compilar:
 
-```json
-{
-    "version": "1.0.0",
-    "version_tuple": [1, 0, 0, 0],
-    "file_description": "MoveMouse - Mantiene activo el cursor",
-    "company_name": "acamus79",
-    "product_name": "MoveMouse",
-    "copyright": "© 2025. Todos los derechos reservados.",
-    "original_filename": "MouseMover",
-    "internal_name": "MouseMover",
-    "bundle_identifier": "com.mousemover.app"
-}
-```
-
 ## Scripts de ejecución y compilación
 
 Todos los scripts verifican automáticamente que Python esté instalado, crean un entorno virtual si es necesario, instalan todas las dependencias requeridas, y ejecutan o compilan el programa dentro del entorno aislado.
 
 ### Windows
-- **Ejecutar**: 
-  - `run_windows.bat` - Archivo batch para ejecutar
-  - `Run-Windows.ps1` - Script PowerShell para ejecutar
-- **Compilar**:
-  - `build_windows.bat` - Archivo batch para compilar
-  - `Build-Windows.ps1` - Script PowerShell para compilar
+- **Ejecutar**: Utiliza el script `run-win.ps1` o `run-win.bat` para ejecutar
+- **Compilar**: Utiliza el script `build-win.ps1` o `build-win.bat` para compilar
 
 ### macOS
 - **Ejecutar**: `run_mac.sh` (usar `chmod +x run_mac.sh` para dar permisos)
@@ -57,7 +40,11 @@ Todos los scripts verifican automáticamente que Python esté instalado, crean u
 
 ## Requisitos
 
-¡No necesitas instalar nada! Los scripts de ejecución y compilación verificarán automáticamente los requisitos e instalarán las dependencias necesarias en un entorno virtual.
+**Python** es el único requisito previo necesario. Los scripts de ejecución y compilación verificarán automáticamente que Python esté instalado, crean un entorno virtual y instalarán todas las dependencias necesarias en dicho entorno.
+
+- **Windows**: Python 3.6 o superior
+- **macOS**: Python 3.6 o superior
+- **Linux**: Python 3.6 o superior
 
 Si prefieres instalar manualmente las dependencias:
 
@@ -75,12 +62,12 @@ pip install keyboard pyinstaller
 
 **macOS**:
 ```bash
-pip install pyobjc-core pyobjc-framework-Quartz pyinstaller
+pip install pyobjc-core pyobjc-framework-Quartz pynput pyinstaller
 ```
 
 **Linux**:
 ```bash
-pip install python-xlib pyinstaller
+pip install python-xlib pynput pyinstaller
 ```
 
 ## Uso
@@ -92,10 +79,10 @@ Simplemente ejecuta el script correspondiente a tu plataforma y se encargará de
 **Windows**:
 ```bash
 # Usando batch
-run_windows.bat
+run-win.bat
 
 # Usando PowerShell
-.\Run-Windows.ps1
+run-win.ps1
 
 # Directamente con Python
 python mm_windows.py
@@ -110,7 +97,7 @@ Presiona `F12` para detener.
 # Directamente con Python
 python3 mm_mac.py
 ```
-Presiona `Ctrl+C` o `Cmd+Q` para detener.
+Presiona `F12` para detener.
 
 **Linux**:
 ```bash
@@ -120,7 +107,7 @@ Presiona `Ctrl+C` o `Cmd+Q` para detener.
 # Directamente con Python
 python3 mm_linux.py
 ```
-Presiona `Ctrl+C` para detener.
+Presiona `F12` para detener.
 
 ### Compilación del ejecutable
 
@@ -129,10 +116,10 @@ Los scripts de compilación automatizan todo el proceso, incluyendo la creación
 **Windows**:
 ```bash
 # Usando batch
-build_windows.bat
+build-win.bat
 
 # Usando PowerShell
-.\Build-Windows.ps1
+build-win.ps1
 
 # Directamente con PyInstaller
 pyinstaller windows.spec
@@ -167,7 +154,6 @@ El ejecutable se generará en la carpeta `dist`.
 - Los scripts automatizan la creación del entorno virtual con `venv`
 
 ### macOS
-- Necesitas crear un archivo de icono `.icns` si deseas un icono personalizado
 - La aplicación puede requerir permisos de accesibilidad
 - Para otorgar permisos: Preferencias del Sistema → Seguridad y Privacidad → Privacidad → Accesibilidad
 
